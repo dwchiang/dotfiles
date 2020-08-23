@@ -4,13 +4,13 @@ Before doing anything, make sure you know what are you doing! Settings applied b
 
 ## Prerequisites
 
-Make sure the macOS software is up to date:
+1. Make sure the macOS software is up to date:
 
 ```
 sudo softwareupdate -i -a --restart
 ```
 
-Install Apple XCode command line tools:
+2. Install Apple Xcode Command Line Tools:
 
 ```
 xcode-select --install
@@ -21,7 +21,7 @@ xcode-select --install
 1. Install brew and brew install:
 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dwchiang/dotfiles/master/setup-brew.sh)" 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dwchiang/dotfiles/master/scripts/setup-brew.sh)" 
 ```
 
 2. Setup SSH.
@@ -31,22 +31,23 @@ xcode-select --install
 git clone git@github.com:dwchiang/dotfiles.git ~/.dotfiles
 ```
 
-4. Setup macOS:
+4. Init & Setup macOS:
 
 ```
-source ~/.dotfiles/setup-macos.sh
+source ~/.dotfiles/scripts/init-macos.sh
+source ~/.dotfiles/scripts/setup-macos.sh
 ```
 
 5. Setup symlinks:
 
 ```
-source ~/.dotfiles/setup-symlinks.sh
+source ~/.dotfiles/scripts/setup-symlinks.sh
 ```
 
 6. Setup VSCode:
 
 ```
-source ~/.dotfiles/setup-vscode.sh
+source ~/.dotfiles/scripts/setup-vscode.sh
 ```
 
 ## Reference
@@ -55,3 +56,7 @@ source ~/.dotfiles/setup-vscode.sh
   - [Change macOS user preferences via command line](https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/)
 - Mathias’s dotfiles (https://github.com/mathiasbynens/dotfiles)
 - [Paul Irish](https://www.paulirish.com/)'s dotfiles (https://github.com/paulirish/dotfiles)
+- (中文) Amo Wu's dotfiles (https://github.com/amowu/dotfiles) 
+- [zero.sh](https://github.com/zero-sh/zero.sh): Radically simple personal bootstrapping tool for macOS.
+  - [apply-user-defaults](https://github.com/zero-sh/apply-user-defaults) is a small utility to set macOS user defaults declaratively from a YAML file.
+- [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)

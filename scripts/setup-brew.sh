@@ -80,6 +80,7 @@ brew install libsoup
 brew install libyubikey
 brew install little-cms
 brew install lsusb
+brew install mackup
 brew install macvim
 brew install mas-cli/tap/mas
 brew install mcrypt
