@@ -184,6 +184,7 @@ brew cask install postman
 brew cask install proxyman
 brew cask install rescuetime
 brew cask install sequel-pro
+brew cask install sizeup
 brew cask install sketch
 brew cask install skype
 brew cask install slack
