@@ -1,0 +1,37 @@
+# Local/private config goes in the include
+[include]
+    path = ~/.gitconfig.local
+[alias]
+    lg = log --color --pretty=format:'%Cred%h%Creset - %Cblue%ad%Creset - %aN - %s' --date=short
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[commit]
+    # Ref: https://dev.to/sespinozj/git-write-quality-commits-38ph
+	template = ~/.git-commit-template
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[apply]
+    whitespace = nowarn
+[mergetool]
+    keepBackup = false
+[difftool]
+    prompt = false
+[help]
+    autocorrect = 1
+[push]
+    # See `git help config` (search for push.default)
+    # for more information on different options of the below setting.
+    #
+    # Setting to git 2.0 default to suppress warning message
+    default = simple	
+
+

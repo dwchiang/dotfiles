@@ -1,4 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+source $DOTFILES_ROOT/scripts/lib.sh
+
+set -e
+
+echo ''
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -249,7 +257,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
