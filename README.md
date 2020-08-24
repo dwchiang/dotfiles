@@ -14,6 +14,8 @@ If you are **NOT** Ernest Chiang, please fork it before doing anything, then mod
 
 If you are Ernest Chiang, please follow it step by step.
 
+----
+
 ## Prerequisites
 
 1. Make sure the macOS software is up to date:
@@ -69,11 +71,30 @@ Edit your own `.gitconfig.local` which can be duplicated from `.gitconfig.local.
 source ~/.dotfiles/scripts/setup-symlinks.sh
 ```
 
-6. Setup VSCode:
+----
+
+## Daily Usage
+
+### Mackup
+
+- [Mackup](https://github.com/lra/mackup) project and [doc](https://github.com/lra/mackup/tree/master/doc).
+- Edit `.mackup.cfg` to fit your backup settings and scope.
 
 ```
-source ~/.dotfiles/scripts/setup-vscode.sh
+# Launch it and back up your files
+mackup backup
 ```
+
+```
+# Launch it and restore your files
+mackup restore
+```
+
+### Visual Studio Code
+
+- [Turning on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
+
+----
 
 ## Reference
 
