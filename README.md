@@ -1,14 +1,16 @@
 # Ernest Chiang's dotfiles
 
 **Before doing anything, make sure you know what are you doing! **
+
 **Before doing anything, make sure you know what are you doing! **
+
 **Before doing anything, make sure you know what are you doing! **
 
 Settings applied by this repository are very personal and definitely not for everyone. I suggest to create your own set of dotfiles based on this repo.
 
 ## How to Use?
 
-If you are NOT Ernest Chiang, please fork it before doing anything, then modify it, then use it.
+If you are **NOT** Ernest Chiang, please fork it before doing anything, then modify it, then use it.
 
 If you are Ernest Chiang, please follow it step by step.
 
