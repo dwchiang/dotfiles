@@ -20,12 +20,25 @@ install_ohmyzsh () {
   then
     info '  Installing oh-my-zsh'
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    success '  Installed oh-my-zsh'
+  fi
+}
+
+# Function: init nvm
+#
+init_nvm () {
+  if [ ! -d ~/.nvm ]
+  then
+    info '  Init nvm'
+    mkdir ~/.nvm
+    success '  Inited nvm'
   fi
 }
 
 # Main 
 #
 install_ohmyzsh
+init_nvm
 
 echo ''
 success '  All installed!'

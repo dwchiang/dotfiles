@@ -94,6 +94,69 @@ mackup restore
 
 - [Turning on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
 
+### Multiple Node.js Versions
+
+- [nvm](https://github.com/nvm-sh/nvm) is a version manager for node.js, designed to be installed per-user, and invoked per-shell. nvm works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash), in particular on these platforms: unix, macOS, and windows WSL.
+
+Install latest node.js version:
+
+```
+# Install latest version
+nvm install node
+
+# Install latest LTS version
+nvm install --lts
+```
+
+### Multiple JAVA Versions
+
+- [How to Manage Multiple Java Versions in MacOS](https://medium.com/@chamikakasun/how-to-manage-multiple-java-version-in-macos-e5421345f6d0)
+- [Working with multiple Java versions in MacOS](https://medium.com/@brunofrascino/working-with-multiple-java-versions-in-macos-9a9c4f15615a)
+
+```
+# jEnv Configurations
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# ensure that JAVA_HOME is correct
+jenv enable-plugin export
+# make Maven aware of the Java version in use (and switch when your project does)
+jenv enable-plugin maven
+```
+
+Find your JDK versions and locations:
+
+```
+/usr/libexec/java_home -V
+```
+
+Add the library you want:
+
+```
+jenv add <jdk_path>
+
+# For example:
+# jenv add /Library/Java/JavaVirtualMachines/openjdk-14.0.2.jdk/Contents/Home
+# openjdk64-14.0.2 added
+# 14.0.2 added
+# 14.0 added
+# 14 added
+
+jenv versions
+
+jenv <scope> <jdk-version>
+
+# For example:
+# jenv global 14.0
+# jenv local 14.0
+
+java -version
+```
+
+### Android
+
+- Android Studio (installed by homebrew)
+- Android SDK Location: `~/Library/Android/sdk`
+
 ----
 
 ## Reference

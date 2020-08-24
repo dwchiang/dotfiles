@@ -43,6 +43,15 @@ success '  Linked for git.'
 echo ''
 
 #################################
+# ssh
+#
+info '  Linking ~/.ssh'
+ln -is ~/.ssh ~/ssh
+
+success '  Linked for ssh.'
+echo ''
+
+#################################
 # mackup
 #
 info '  Linking ~/.mackup.cfg'

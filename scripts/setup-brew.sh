@@ -29,6 +29,7 @@ brew tap vitorgalvao/tiny-scripts
 #   brew leaves - https://apple.stackexchange.com/questions/279077/how-can-i-install-all-brew-packages-listed-in-a-text-file
 #
 brew install ack
+brew install ant
 brew install automake
 brew install aws/tap/aws-sam-cli
 brew install awscli
@@ -83,6 +84,7 @@ brew install lsusb
 brew install mackup
 brew install macvim
 brew install mas-cli/tap/mas
+brew install maven
 brew install mcrypt
 # brew install minikube
 # brew install mysql
@@ -154,11 +156,15 @@ brew cask install grandperspective
 brew cask install handbrake
 brew cask install ifunbox
 brew cask install imageoptim
+brew cask install intel-haxm
 brew cask install istat-menus
 brew cask install iterm2
-# brew cask install java
+brew cask install java
 # brew cask install java6
+# brew cask install java7
 # brew cask install java8
+# brew cask install java9
+# brew cask install java10
 brew cask install joplin
 brew cask install keepassx
 brew cask install keka
