@@ -44,6 +44,8 @@ It may require enter user password couple times in this step.
 
 Setup SSH and place personal keys at a right place for git clone on next step.
 
+Import key(s) into GPG Keychain.
+
 3. Clone this repo:
 
 Clone it for future easier maintainance.
