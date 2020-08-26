@@ -79,13 +79,17 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 
 ----
 
-## First Run
+## First Run & Setup
 
 
 
 ### Dropbox
 
 - After setting computer name.
+
+### iTerm 2
+
+- Set `Preferences` > `General` > `Preferences` > `Load preferences from a custom folder or URL`.
 
 ### GPG Keychain
 
