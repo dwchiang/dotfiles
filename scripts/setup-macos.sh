@@ -7,6 +7,7 @@ source $DOTFILES_ROOT/scripts/lib.sh
 set -e
 
 echo ''
+info '  Tell application "System Preferences" to quit.'
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -21,6 +22,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
+info '  General UI/UX'
 
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "ernest-mbp0xd0x7e4"
@@ -106,6 +108,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
+info '  Trackpad, mouse, keyboard, Bluetooth accessories, and input'
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -172,6 +175,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 #   - Get current system sleep behavior: 
 #     `sudo systemsetup -getcomputersleep`
 # 
+info '  Energy saving'
 
 # Enable lid wakeup
 sudo pmset -a lidwake 1
@@ -214,6 +218,7 @@ sudo pmset -a hibernatemode 3
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
+info '  Screen'
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -238,6 +243,7 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+info '  Finder'
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -353,6 +359,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
+info '  Dock, Dashboard, and hot corners'
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -460,6 +467,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
+info '  Safari & WebKit'
 
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -549,6 +557,7 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
+info '  Mail'
 
 # Disable send and reply animations in Mail.app
 defaults write com.apple.mail DisableReplyAnimations -bool true
@@ -574,6 +583,7 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
+info '  Spotlight'
 
 # Hide Spotlight tray-icon (and subsequent helper)
 #sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
@@ -622,6 +632,7 @@ sudo mdutil -E / > /dev/null
 ###############################################################################
 # Terminal & iTerm 2                                                          #
 ###############################################################################
+info '  Terminal & iTerm 2'
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
@@ -694,6 +705,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
+info '  Time Machine'
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -704,6 +716,7 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 ###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################
+info '  Activity Monitor'
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -721,6 +734,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
 ###############################################################################
+info '  Address Book, Dashboard, iCal, TextEdit, and Disk Utility'
 
 # Enable the debug menu in Address Book
 defaults write com.apple.addressbook ABShowDebugMenu -bool true
@@ -747,6 +761,7 @@ defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
+info '  Mac App Store'
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
@@ -778,6 +793,7 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 ###############################################################################
 # Photos                                                                      #
 ###############################################################################
+info '  Photos'
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
@@ -785,6 +801,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ###############################################################################
 # Messages                                                                    #
 ###############################################################################
+info '  Messages'
 
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
@@ -798,6 +815,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
+info '  Google Chrome & Google Chrome Canary'
 
 # Disable the all too sensitive backswipe on trackpads
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
@@ -818,6 +836,7 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 # GPGMail 2                                                                   #
 ###############################################################################
+info '  GPGMail 2'
 
 # Disable signing emails by default
 defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
@@ -825,6 +844,7 @@ defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault
 ###############################################################################
 # SizeUp.app                                                                  #
 ###############################################################################
+info '  SizeUp.app'
 
 # Start SizeUp at login
 defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
@@ -835,6 +855,7 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
+info '  Transmission.app'
 
 # Use `~/Documents/Torrents` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
@@ -870,6 +891,7 @@ defaults write org.m0k.transmission RandomPort -bool true
 ###############################################################################
 # Twitter.app                                                                 #
 ###############################################################################
+info '  Twitter.app'
 
 # Disable smart quotes as it’s annoying for code tweets
 defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
@@ -895,6 +917,7 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 ###############################################################################
 # Tweetbot.app                                                                #
 ###############################################################################
+info '  Tweetbot.app'
 
 # Bypass the annoyingly slow t.co URL shortener
 defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
@@ -902,6 +925,7 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
+info '  Kill affected applications'
 
 for app in "Activity Monitor" \
 	"Address Book" \
@@ -926,4 +950,4 @@ for app in "Activity Monitor" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+success '  Done. Note that some of these changes require a logout/restart to take effect.'

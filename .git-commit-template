@@ -1,4 +1,6 @@
-# Ref: https://dev.to/sespinozj/git-write-quality-commits-38ph
+
+
+#
 #[Add/Fix/Remove/Update/Refactor/Document/Secure/Deprecate]
 #[]
 #
@@ -6,5 +8,8 @@
 #-
 #
 # [issue #id]
+#
+#
+# Ref: https://dev.to/sespinozj/git-write-quality-commits-38ph
 #
 #

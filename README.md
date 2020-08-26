@@ -40,11 +40,13 @@ It may require enter user password couple times in this step.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dwchiang/dotfiles/master/scripts/setup-brew.sh)" 
 ```
 
+- Now, we can run **iTerm2**.
+
 2. Setup SSH.
 
 Setup SSH and place personal keys at a right place for git clone on next step.
 
-Import key(s) into GPG Keychain.
+- Have a copy of `~/.ssh`
 
 3. Clone this repo:
 
@@ -57,6 +59,8 @@ git clone git@github.com:dwchiang/dotfiles.git ~/.dotfiles
 4. Init & Setup macOS:
 
 Init by installing [Oh My Zsh](https://ohmyz.sh/), and setup macOS defaults.
+
+Please remember to change the `computer name` in `./scripts/setup-macos.sh`.
 
 ```
 source ~/.dotfiles/scripts/init-macos.sh
@@ -72,6 +76,21 @@ Edit your own `.gitconfig.local` which can be duplicated from `.gitconfig.local.
 ```
 source ~/.dotfiles/scripts/setup-symlinks.sh
 ```
+
+----
+
+## First Run
+
+
+
+### Dropbox
+
+- After setting computer name.
+
+### GPG Keychain
+
+- Before using git commit.
+- Run **GPG Keychain** and import key(s) into GPG Keychain.
 
 ----
 
