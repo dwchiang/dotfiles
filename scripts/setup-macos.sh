@@ -713,7 +713,7 @@ info '  Time Machine'
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+#hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -927,29 +927,29 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
-info '  Kill affected applications'
+# info '  Kill affected applications'
 
-for app in "Activity Monitor" \
-	"Address Book" \
-	"Calendar" \
-	"cfprefsd" \
-	"Contacts" \
-	"Dock" \
-	"Finder" \
-	"Google Chrome Canary" \
-	"Google Chrome" \
-	"Mail" \
-	"Messages" \
-	"Opera" \
-	"Photos" \
-	"Safari" \
-	"SizeUp" \
-	"SystemUIServer" \
-	"Terminal" \
-	"Transmission" \
-	"Tweetbot" \
-	"Twitter" \
-	"iCal"; do
-	killall "${app}" &> /dev/null
-done
+# for app in "Activity Monitor" \
+# 	"Address Book" \
+# 	"Calendar" \
+# 	"cfprefsd" \
+# 	"Contacts" \
+# 	"Dock" \
+# 	"Finder" \
+# 	"Google Chrome Canary" \
+# 	"Google Chrome" \
+# 	"Mail" \
+# 	"Messages" \
+# 	"Opera" \
+# 	"Photos" \
+# 	"Safari" \
+# 	"SizeUp" \
+# 	"SystemUIServer" \
+# 	"Terminal" \
+# 	"Transmission" \
+# 	"Tweetbot" \
+# 	"Twitter" \
+# 	"iCal"; do
+# 	killall "${app}" &> /dev/null
+# done
 success '  Done. Note that some of these changes require a logout/restart to take effect.'
