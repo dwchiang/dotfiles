@@ -81,11 +81,15 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 
 ## First Run & Setup
 
-
-
 ### Dropbox
 
 - After setting computer name.
+
+### keepass
+
+### Visual Studio Code
+
+- [Turning on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
 
 ### iTerm 2
 
@@ -114,10 +118,6 @@ mackup backup
 # Launch it and restore your files
 mackup restore
 ```
-
-### Visual Studio Code
-
-- [Turning on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
 
 ### Multiple Node.js Versions
 
