@@ -118,6 +118,7 @@ export PATH="${PATH}:${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/
 # Aliases
 ####################################################################
 source ~/.aliases
+source ~/.aliases.local
 
 ####################################################################
 # You may need to manually set your language environment

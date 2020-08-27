@@ -71,7 +71,8 @@ source ~/.dotfiles/scripts/setup-macos.sh
 
 Create symlinks for dotfiles (e.g. `.zshrc`, `.gitconfig`, etc).
 
-Edit your own `.gitconfig.local` which can be duplicated from `.gitconfig.local.example`.
+- Edit your own `.gitconfig.local` which can be duplicated from `.gitconfig.local.example`.
+- Edit your own `.aliases.local` which can be duplicated from `.aliases.local.example`.
 
 ```
 source ~/.dotfiles/scripts/setup-symlinks.sh
@@ -170,6 +171,10 @@ java -version
 ### Flutter
 
 - Flutter SDK Location: `~/Library/flutter`
+
+### (My Notes)
+
+- `ln -is /Users/___userNameHere___/Dropbox/Apps/Byword/notes ~/notes`
 
 ----
 
