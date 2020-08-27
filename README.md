@@ -91,6 +91,10 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 
 - [Turning on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
 
+### Alfrad
+
+- `Advanced` > `Set preferences folder...` (path = //(storage)/Sync/Alfrad)
+
 ### iTerm 2
 
 - Set `Preferences` > `General` > `Preferences` > `Load preferences from a custom folder or URL`.
@@ -99,25 +103,6 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 
 - Before using git commit.
 - Run **GPG Keychain** and import key(s) into GPG Keychain.
-
-----
-
-## Daily Usage
-
-### Mackup
-
-- [Mackup](https://github.com/lra/mackup) project and [doc](https://github.com/lra/mackup/tree/master/doc).
-- Edit `.mackup.cfg` to fit your backup settings and scope.
-
-```
-# Launch it and back up your files
-mackup backup
-```
-
-```
-# Launch it and restore your files
-mackup restore
-```
 
 ### Multiple Node.js Versions
 
@@ -181,6 +166,29 @@ java -version
 
 - Android Studio (installed by homebrew)
 - Android SDK Location: `~/Library/Android/sdk`
+
+### Flutter
+
+- Flutter SDK Location: `~/Library/flutter`
+
+----
+
+## Daily Usage
+
+### Mackup
+
+- [Mackup](https://github.com/lra/mackup) project and [doc](https://github.com/lra/mackup/tree/master/doc).
+- Edit `.mackup.cfg` to fit your backup settings and scope.
+
+```
+# Launch it and back up your files
+mackup backup
+```
+
+```
+# Launch it and restore your files
+mackup restore
+```
 
 ----
 

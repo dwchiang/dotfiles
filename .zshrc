@@ -88,6 +88,7 @@ export PATH="${PATH}:${HOME}/.pub-cache/bin"
 
 # Flutter
 export PATH="${PATH}:${HOME}/Development/flutter/flutter_v1.12.13+hotfix.5-stable/bin"
+export PATH="${PATH}:${HOME}/Library/flutter/bin"
 
 # GCC
 export PATH="${PATH}:${HOME}/Development/gcc/gcc-arm-none-eabi-7-2018-q2-update/bin"
