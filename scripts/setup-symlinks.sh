@@ -21,6 +21,9 @@ ln -is ~/.dotfiles/.zshrc ~/.zshrc
 info '  Linking ~/.aliases'
 ln -is ~/.dotfiles/.aliases ~/.aliases
 
+info '  Linking ~/.aliases.local'
+ln -is ~/.dotfiles/.aliases.local ~/.aliases.local
+
 success '  Linked for Oh My Zsh.'
 echo ''
 
@@ -59,6 +62,20 @@ ln -is ~/.dotfiles/.mackup.cfg ~/.mackup.cfg
 
 success '  Linked for mackup.'
 echo ''
+
+#################################
+# vim
+#
+
+# https://github.com/VundleVim/Vundle.vim
+info '  Installing Vundle...'
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+info '  Linking ~/.vimrc'
+ln -is ~/.dotfiles/.vimrc ~/.vimrc
+
+info '  Installing vim plugins...'
+vim +PluginInstall +qall
 
 # Initialize new settings
 success '  Done. Please execute: `source ~/.zshrc`'

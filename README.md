@@ -105,6 +105,15 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 - Before using git commit.
 - Run **GPG Keychain** and import key(s) into GPG Keychain.
 
+### Multiple Python Versions
+
+- Using `pyenv`.
+- Ref: [The right and wrong way to set Python 3 as default on a Mac](https://opensource.com/article/19/5/python-3-default-mac)
+
+```
+source ~/.dotfiles/scripts/setup-python.sh
+```
+
 ### Multiple Node.js Versions
 
 - [nvm](https://github.com/nvm-sh/nvm) is a version manager for node.js, designed to be installed per-user, and invoked per-shell. nvm works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash), in particular on these platforms: unix, macOS, and windows WSL.

@@ -143,6 +143,7 @@ brew cask install docker
 brew cask install drawio
 brew cask install dropbox
 brew cask install dynobase
+brew cask install electrum
 brew cask install firefox
 brew cask install font-source-code-pro
 brew cask install fork
@@ -190,6 +191,7 @@ brew cask install phoenix-slides
 brew cask install postman
 brew cask install proxyman
 brew cask install rescuetime
+brew cask install sequel-ace
 brew cask install sequel-pro
 brew cask install sizeup
 brew cask install sketch
