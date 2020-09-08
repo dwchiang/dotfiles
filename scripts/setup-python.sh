@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 source $DOTFILES_ROOT/scripts/lib.sh
 
-set -e
+set -x
 
 echo ''
 
@@ -23,6 +23,12 @@ pyenv global $(pyenv install --list | grep -v - | grep -v b | tail -1)
 
 info '  Check current version'
 pyenv version
+
+info '  Installing useful packages'
+pip install pandas
+pip install requests
+pip install bs4
+pip install lxml
 
 success '  Finished the setup for python'
 echo ''

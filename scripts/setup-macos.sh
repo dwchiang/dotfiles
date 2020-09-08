@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 source $DOTFILES_ROOT/scripts/lib.sh
 
-set -e
+set -x
 
 echo ''
 info '  Tell application "System Preferences" to quit.'
