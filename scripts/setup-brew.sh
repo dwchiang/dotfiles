@@ -56,6 +56,7 @@ brew install esptool
 # brew install ethereum
 brew install exiftool
 brew install geoip
+brew install gh
 brew install git
 brew install gnu-sed
 brew install gnupg
@@ -175,10 +176,12 @@ brew cask install keepassx
 brew cask install keka
 brew cask install keybase
 brew cask install keystore-explorer
+brew cask install kobo
 brew cask install limechat
 brew cask install macdown
 brew cask install macs-fan-control
 brew cask install mactracker
+brew cask install microsoft-office
 # brew cask install microsoft-teams
 # brew cask install minikube
 brew cask install moom

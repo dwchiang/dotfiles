@@ -29,6 +29,7 @@ pip install pandas
 pip install requests
 pip install bs4
 pip install lxml
+pip install feedparser
 
 success '  Finished the setup for python'
 echo ''
