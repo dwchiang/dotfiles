@@ -24,6 +24,9 @@ ln -is ~/.dotfiles/.aliases ~/.aliases
 info '  Linking ~/.aliases.local'
 ln -is ~/.dotfiles/.aliases.local ~/.aliases.local
 
+info '  Linking ~/.p10k.zsh'
+ln -is ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
+
 success '  Linked for Oh My Zsh.'
 echo ''
 

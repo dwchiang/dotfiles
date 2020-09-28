@@ -34,6 +34,7 @@ brew tap vitorgalvao/tiny-scripts
 #
 brew install ack
 brew install ant
+brew install autojump
 brew install automake
 brew install aws/tap/aws-sam-cli
 brew install awscli
