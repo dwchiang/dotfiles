@@ -177,6 +177,7 @@ brew cask install keepassx
 brew cask install keka
 brew cask install keybase
 brew cask install keystore-explorer
+brew cask install kindle
 brew cask install kobo
 brew cask install limechat
 brew cask install macdown
