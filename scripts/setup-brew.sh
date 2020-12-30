@@ -176,6 +176,7 @@ brew cask install joplin
 brew cask install keepassx
 brew cask install keka
 brew cask install keybase
+brew cask install keycastr
 brew cask install keystore-explorer
 brew cask install kindle
 brew cask install kobo
@@ -200,9 +201,10 @@ brew cask install phoenix-slides
 brew cask install postman
 brew cask install proxyman
 brew cask install rescuetime
+brew cask install send-to-kindle
 brew cask install sequel-ace
 brew cask install sequel-pro
-brew cask install sizeup
+# brew cask install sizeup
 brew cask install sketch
 brew cask install skype
 brew cask install slack

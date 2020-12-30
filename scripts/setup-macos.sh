@@ -846,13 +846,13 @@ defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault
 ###############################################################################
 # SizeUp.app                                                                  #
 ###############################################################################
-info '  SizeUp.app'
+# info '  SizeUp.app'
 
 # Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
+# defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
 
 # Don’t show the preferences window on next start
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+# defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
 ###############################################################################
 # Transmission.app                                                            #
