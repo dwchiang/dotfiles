@@ -125,6 +125,7 @@ brew install wget
 brew install hsatac/toybox/wifi-password-qr
 brew install wireshark
 brew install youtube-dl
+brew install zotero
 brew install zsh-completions
 
 # Casks
@@ -181,6 +182,7 @@ brew install --cask keybase
 brew install --cask keycastr
 brew install --cask keystore-explorer
 brew install --cask kindle
+brew install --cask kite
 brew install --cask kobo
 brew install --cask limechat
 brew install --cask macdown
