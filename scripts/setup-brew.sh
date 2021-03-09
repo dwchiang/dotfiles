@@ -67,6 +67,7 @@ brew install gradle
 brew install graphicsmagick
 brew install gsl
 brew install gtkmm
+brew install hey
 brew install hping
 brew install httpd
 brew install hugo
@@ -197,6 +198,7 @@ brew install --cask nally
 brew install --cask ngrok
 brew install --cask nosql-workbench-for-amazon-dynamodb
 brew install --cask obs
+brew install --cask obsidian
 brew install --cask omnidisksweeper
 brew install --cask omnifocus
 brew install --cask omnigraffle
