@@ -80,6 +80,7 @@ brew install jenv
 brew install jmeter
 brew install jpegoptim
 brew install jq
+brew install k6
 brew install libiconv
 brew install libmemcached
 brew install librsync
@@ -197,6 +198,7 @@ brew install --cask mysqlworkbench
 brew install --cask nally
 brew install --cask ngrok
 brew install --cask nosql-workbench-for-amazon-dynamodb
+brew install --cask notion
 brew install --cask obs
 brew install --cask obsidian
 brew install --cask omnidisksweeper
