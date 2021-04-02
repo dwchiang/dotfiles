@@ -2,6 +2,10 @@
 [include]
     path = ~/.gitconfig.local
 [alias]
+    co = checkout
+    br = branch
+    st = status
+    l  = log --color --oneline --graph
     lg = log --color --pretty=format:'%Cred%h%Creset - %Cblue%ad%Creset - %aN - %s' --date=short
 [color]
     diff = auto
