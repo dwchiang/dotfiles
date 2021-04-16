@@ -58,7 +58,9 @@ brew install esptool
 brew install exiftool
 brew install geoip
 brew install gh
+brew install gifsicle
 brew install git
+brew install gitui
 brew install gnu-sed
 brew install gnupg
 brew install gnuplot

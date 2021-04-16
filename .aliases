@@ -1,2 +1,6 @@
 # Place aliases in this file, for example:
 #   alias cat='bat'
+
+# Convert .mov to .gif
+# https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
+alias video_to_gif='function video_to_gif(){ ffmpeg -i "$1" "${1%.*}.gif" && gifsicle -O3 "${1%.*}.gif" -o "${1%.*}.gif" && osascript -e "display notification \"${1%.*}.gif successfully converted and saved\" with title \"MOV2GIF SUCCESS!\""};video_to_gif'
