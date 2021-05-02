@@ -59,6 +59,7 @@ brew install exiftool
 brew install geoip
 brew install gh
 brew install gifsicle
+brew install gifski
 brew install git
 brew install gitui
 brew install gnu-sed
