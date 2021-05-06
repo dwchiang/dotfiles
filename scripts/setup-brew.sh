@@ -73,6 +73,7 @@ brew install gtkmm
 brew install hey
 brew install hping
 brew install httpd
+brew install httpie
 brew install hugo
 brew install ideviceinstaller
 brew install imagemagick
