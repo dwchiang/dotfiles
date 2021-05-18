@@ -16,6 +16,7 @@ brew tap aws/tap
 brew tap brewsci/bio
 brew tap brewsci/science
 brew tap dart-lang/dart
+brew tap federico-terzi/espanso
 brew tap homebrew/cask
 brew tap homebrew/cask-drivers
 brew tap homebrew/cask-fonts
@@ -53,6 +54,8 @@ brew install composer
 brew install dart-lang/dart/dart
 brew install dnsmap
 # brew install docker
+brew install duf
+brew install espanso
 brew install esptool
 # brew install ethereum
 brew install exiftool
