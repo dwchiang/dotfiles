@@ -56,6 +56,10 @@ brew install dnsmap
 # brew install docker
 brew install duf
 brew install espanso
+
+espanso install all-emojis
+espanso restart
+
 brew install esptool
 # brew install ethereum
 brew install exiftool
