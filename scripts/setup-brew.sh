@@ -45,6 +45,7 @@ brew install awscli
 brew install bash-completion
 brew install bat
 brew install bdw-gc
+brew install blackhole-16ch
 brew install boost
 brew install boost-build
 brew install brew-cask-completion
@@ -126,6 +127,7 @@ brew install protobuf
 brew install pyenv
 # brew install python@2
 brew install redis
+brew install romkatv/powerlevel10k/powerlevel10k
 brew install siege
 brew install socat
 brew install speedtest-cli
@@ -141,6 +143,7 @@ brew install wget
 brew install hsatac/toybox/wifi-password-qr
 brew install wireshark
 brew install youtube-dl
+brew install zoom
 brew install zotero
 brew install zsh-completions
 
@@ -252,7 +255,7 @@ brew install --cask xnconvert
 brew install --cask xnviewmp
 brew install --cask xquartz
 brew install --cask yasu
-brew install --cask zoomus
+# brew install --cask zoomus
 
 # Remove outdated versions from the cellar
 #

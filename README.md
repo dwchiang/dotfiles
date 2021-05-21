@@ -34,7 +34,8 @@ xcode-select --install
 
 1. Install brew and brew install:
 
-It may require enter user password couple times in this step.
+- It may require enter user password couple times in this step.
+- It may spend coupld hours to install all the softwares.
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dwchiang/dotfiles/master/scripts/setup-brew.sh)" 
@@ -44,9 +45,10 @@ It may require enter user password couple times in this step.
 
 2. Setup SSH.
 
-Setup SSH and place personal keys at a right place for git clone on next step.
+Setup SSH and place personal keys at a right place for _git clone_ on next step.
 
 - Have a copy of `~/.ssh`
+- Make sure `~/.ssh/config` points the ssh key file to be able to access GitHub. Test method: `ssh -vT git@github.com`
 
 3. Clone this repo:
 
@@ -88,6 +90,14 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 
 ### keepass
 
+### Backup files between two Mac using scp
+
+System Preferences pane → Sharing applet → check the **Remote Login** checkbox. This will enable SSH, and in turn, SCP.
+
+```
+❯ scp -r ~/Pictures/Desktop\ Pictures  dwchiang@10.0.0.115:"~/Pictures"
+```
+
 ### Visual Studio Code
 
 - [Turning on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
@@ -99,6 +109,12 @@ source ~/.dotfiles/scripts/setup-symlinks.sh
 ### iTerm 2
 
 - Set `Preferences` > `General` > `Preferences` > `Load preferences from a custom folder or URL`.
+
+### projects folder
+
+```
+❯ ln -is /Users/dwchiang/Dropbox/projects ~/projects
+```
 
 ### GPG Keychain
 
