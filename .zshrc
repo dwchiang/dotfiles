@@ -76,19 +76,46 @@ plugins=(
   autojump
 )
 
-# for autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
 source $ZSH/oh-my-zsh.sh
+
+
+####################################################################
+# arch
+####################################################################
+# https://cutecoder.org/software/detecting-apple-silicon-shell-script/
+
+arch_name="$(uname -m)"
+ 
+if [ "${arch_name}" = "x86_64" ]; then
+    if [ "$(sysctl -in sysctl.proc_translated)" = "1" ]; then
+        echo "Running on Rosetta 2"
+    else
+        echo "Running on native Intel"
+    fi 
+elif [ "${arch_name}" = "arm64" ]; then
+    echo "Running on ARM"
+else
+    echo "Unknown architecture: ${arch_name}"
+fi
 
 ####################################################################
 # User configuration
 ####################################################################
 
 # General path
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="${PATH}:/usr/local/opt/ab/bin"
-export PATH="${PATH}:/usr/local/sbin"
+# https://superuser.com/a/533708
+# https://github.com/Homebrew/brew/issues/7857
+if [ "${arch_name}" = "x86_64" ]; then
+  export PATH="/usr/local/bin:/usr/local/sbin"
+elif [ "${arch_name}" = "arm64" ]; then
+  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin"
+else
+  export PATH="/usr/local/bin:/usr/local/sbin"
+fi
+
+export PATH="${PATH}:/usr/bin:/bin:/usr/sbin:/sbin"
+#export PATH="${PATH}:/usr/local/opt/ab/bin"
+#export PATH="${PATH}:/usr/local/sbin"
 export PATH="${PATH}:${HOME}/.composer/vendor/bin"
 
 # Android
@@ -129,6 +156,9 @@ export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app
 
 # yarn
 export PATH="${PATH}:${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/.bin"
+
+# for autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 ####################################################################
 # Aliases

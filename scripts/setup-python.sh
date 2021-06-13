@@ -10,6 +10,7 @@ source $DOTFILES_ROOT/scripts/lib.sh
 set -x
 
 echo ''
+brew install openssl readline sqlite3 xz zlib
 
 # Refer: 
 #    - https://stackoverflow.com/questions/29687140/install-latest-python-version-with-pyenv
