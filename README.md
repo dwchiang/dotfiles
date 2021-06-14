@@ -10,7 +10,7 @@ Settings applied by this repository are very personal and definitely not for eve
 
 ## How to Use?
 
-If you are **NOT** Ernest Chiang, please fork it before doing anything, then modify it, then use it. Some possible files you need to modify to fit your cases:
+If you are **NOT** Ernest Chiang, please fork it before doing anything, then modify it, then use it. Some files you need to modify to fit your cases:
 
 - **scripts/setup-macos.sh**: ComputerName, HostName, LocalHostName, etc...
 
@@ -32,7 +32,7 @@ sudo softwareupdate -i -a --restart
 xcode-select --install
 ```
 
-3. If you are using Apple Silicon, Install Rosetta:
+3. If you are using Apple Silicon (e.g M1), Install Rosetta:
 
 ```
 softwareupdate --install-rosetta
