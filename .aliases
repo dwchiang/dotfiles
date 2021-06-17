@@ -4,3 +4,13 @@
 # Convert .mov to .gif
 # https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
 alias video_to_gif='function video_to_gif(){ ffmpeg -i "$1" "${1%.*}.gif" && gifsicle -O3 "${1%.*}.gif" -o "${1%.*}.gif" && osascript -e "display notification \"${1%.*}.gif successfully converted and saved\" with title \"MOV2GIF SUCCESS!\""};video_to_gif'
+
+# Use Python 3 as the macOS default
+# https://opensource.com/article/19/5/python-3-default-mac
+if [ "${arch_name}" = "x86_64" ]; then
+    alias python=/usr/local/bin/python3
+    alias pip=/usr/local/bin/pip3
+elif [ "${arch_name}" = "arm64" ]; then
+    alias python=/opt/homebrew/bin/python3
+    alias pip=/opt/homebrew/bin/pip3
+fi

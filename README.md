@@ -128,6 +128,20 @@ System Preferences pane → Sharing applet → check the **Remote Login** checkb
 
 - Before using git commit.
 - Run **GPG Keychain** and import key(s) into GPG Keychain.
+- Reference: [gpg —list-keys command outputs uid [ unknown ] after importing private key onto a clean install](https://unix.stackexchange.com/questions/407062/gpg-list-keys-command-outputs-uid-unknown-after-importing-private-key-onto)
+  - `gpg --list-secret-keys --keyid-format LONG`
+  - GNUPG has a trust database stored at `~/.gnupg/trustdb.gpg`
+  - backup this trust database: `gpg --export-ownertrust > file.txt`, import them later into a new environment, the trust database is no longer present.
+  - `gpg --edit-key user@useremail.com`
+  - `gpg> trust` --> `Your decision? 5` --> `gpg> save`
+- How to test: 
+  - `echo "test" | gpg --clearsign`
+- Reference: [利用 GPG 簽署 git commit](https://blog.puckwang.com/post/2019/sign_git_commit_with_gpg/)
+  - `brew install pinentry-mac`
+  - Add `no-tty` into `~/.gnupg/gpg.conf`
+  - Add `pinentry-program /usr/local/bin/pinentry-mac` into `~/.gnupg/gpg-agent.conf`
+  - `killall gpg-agent`
+  - Test again: `echo "test" | gpg --clearsign`
 
 ### Multiple Python Versions
 

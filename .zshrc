@@ -107,10 +107,13 @@ fi
 # https://github.com/Homebrew/brew/issues/7857
 if [ "${arch_name}" = "x86_64" ]; then
   export PATH="/usr/local/bin:/usr/local/sbin"
+  export BREWPATH="/usr/local"
 elif [ "${arch_name}" = "arm64" ]; then
   export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin"
+  export BREWPATH="/opt/homebrew"
 else
   export PATH="/usr/local/bin:/usr/local/sbin"
+  export BREWPATH="/usr/local"
 fi
 
 export PATH="${PATH}:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -137,7 +140,7 @@ export PATH="${PATH}:${HOME}/Library/flutter/bin"
 export PATH="${PATH}:${HOME}/Development/gcc/gcc-arm-none-eabi-7-2018-q2-update/bin"
 
 # Go
-export PATH="${PATH}:/usr/local/opt/go/libexec/bin"
+export PATH="${PATH}:${BREWPATH}/opt/go/libexec/bin"
 
 # Nordic nRF CLI
 export PATH="${PATH}:${HOME}/Development/nRF_CLI/nRF-Command-Line-Tools_9_8_1_OSX/nrfjprog"
@@ -146,7 +149,7 @@ export PATH="${PATH}:${HOME}/Development/nRF_CLI/nRF-Command-Line-Tools_9_8_1_OS
 export PATH="${PATH}:$(pyenv root)/shims"
 
 # Ruby
-export PATH="${PATH}:/usr/local/opt/ruby/bin"
+export PATH="${PATH}:${BREWPATH}/opt/ruby/bin"
 
 # Rust
 export PATH="${PATH}:${HOME}/.cargo/bin"
@@ -193,8 +196,8 @@ source ~/.zsh-async/async.zsh
 export NVM_DIR="$HOME/.nvm"
 
 function load_nvm() {
-    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-    [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
+    [ -s "${BREWPATH}/opt/nvm/nvm.sh" ] && . "${BREWPATH}/opt/nvm/nvm.sh"
+    [ -s "${BREWPATH}/opt/nvm/etc/bash_completion" ] && . "${BREWPATH}/opt/nvm/etc/bash_completion"
 }
 
 # Initialize worker

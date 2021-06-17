@@ -120,6 +120,7 @@ brew install packer
 # brew install paritytech/paritytech/parity
 # brew install php
 # brew install php@7.2
+brew install pinentry-mac
 brew install pngcrush
 brew install poppler
 brew install potrace

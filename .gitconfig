@@ -18,6 +18,7 @@
 [commit]
     # Ref: https://dev.to/sespinozj/git-write-quality-commits-38ph
 	template = ~/.git-commit-template
+	gpgsign = true
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
