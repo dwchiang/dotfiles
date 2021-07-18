@@ -33,6 +33,9 @@ brew tap paritytech/paritytech
 # Collection of small scripts - https://github.com/vitorgalvao/homebrew-tiny-scripts
 brew tap vitorgalvao/tiny-scripts
 
+# Logitech Options - MX Master for Mac
+brew install homebrew/cask-drivers/logitech-options
+
 # brew installs
 #   brew leaves - https://apple.stackexchange.com/questions/279077/how-can-i-install-all-brew-packages-listed-in-a-text-file
 #
@@ -67,6 +70,7 @@ espanso restart
 brew install esptool
 # brew install ethereum
 brew install exiftool
+brew install fswatch
 brew install geoip
 brew install gh
 brew install gifsicle
@@ -153,6 +157,7 @@ brew install zsh-completions
 # Memo: Calling brew cask install is disabled! Use brew install [--cask] instead.
 #
 brew install --cask alfred
+brew install --cask aegisub
 brew install --cask amazon-chime
 brew install --cask android-platform-tools
 brew install --cask android-studio
@@ -167,6 +172,7 @@ brew install --cask clipy
 brew install --cask coolterm
 brew install --cask cyberduck
 brew install --cask db-browser-for-sqlite
+brew install --cask deepl
 brew install --cask discord
 brew install --cask docker
 brew install --cask drawio
@@ -210,6 +216,7 @@ brew install --cask mactracker
 brew install --cask microsoft-office
 # brew install --cask microsoft-teams
 # brew install --cask minikube
+brew install --cask mkvtoolnix
 brew install --cask moom
 brew install --cask mysqlworkbench
 brew install --cask nally

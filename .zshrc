@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# My Shell Lib
+DOTFILES_ROOT=~/.dotfiles
+source $DOTFILES_ROOT/scripts/lib.sh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -20,7 +24,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # https://github.com/romkatv/powerlevel10k
 # ZLE_RPROMPT_INDENT=6
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
-[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+[[ ! -f $DOTFILES_ROOT/.p10k.zsh ]] || source $DOTFILES_ROOT/.p10k.zsh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
