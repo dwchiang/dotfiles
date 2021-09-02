@@ -242,6 +242,10 @@ mackup backup
 mackup restore
 ```
 
+### Readwise Mac tool (for iBooks highlights)
+
+- [Import your iBooks highlights | Readwise](https://readwise.io/ibooks)
+
 ----
 
 ## Reference

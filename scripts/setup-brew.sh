@@ -76,6 +76,7 @@ brew install gh
 brew install gifsicle
 brew install gifski
 brew install git
+brew install git-lfs
 brew install gitui
 brew install gnu-sed
 brew install gnupg
@@ -100,6 +101,7 @@ brew install jmeter
 brew install jpegoptim
 brew install jq
 brew install k6
+brew install lima
 brew install libiconv
 brew install libmemcached
 brew install librsync
@@ -189,6 +191,7 @@ brew install --cask google-drive-file-stream
 brew install --cask google-hangouts
 brew install --cask gpg-suite
 brew install --cask grandperspective
+brew install --cask hacker-menu
 brew install --cask handbrake
 brew install --cask ifunbox
 brew install --cask imageoptim
@@ -229,6 +232,7 @@ brew install --cask omnidisksweeper
 brew install --cask omnifocus
 brew install --cask omnigraffle
 brew install --cask openvisualtraceroute
+brew install --cask pdf-expert
 brew install --cask phoenix-slides
 brew install --cask postman
 brew install --cask proxyman
