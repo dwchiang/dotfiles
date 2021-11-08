@@ -123,6 +123,7 @@ brew install numpy
 brew install nvm
 brew install opencv@2
 brew install packer
+brew install pandoc
 # brew install paritytech/paritytech/parity
 # brew install php
 # brew install php@7.2
@@ -166,21 +167,24 @@ brew install --cask android-studio
 brew install --cask androidtool
 brew install --cask angry-ip-scanner
 brew install --cask bartender
+brew install --cask basictex
 brew install --cask blue-jeans
 # brew install --cask boinc
-brew install --cask brackets
+# brew install --cask brackets
 brew install --cask calibre
 brew install --cask clipy
 brew install --cask coolterm
 brew install --cask cyberduck
 brew install --cask db-browser-for-sqlite
-brew install --cask deepl
+# brew install --cask deepl
 brew install --cask discord
 brew install --cask docker
 brew install --cask drawio
 brew install --cask dropbox
 brew install --cask dynobase
 brew install --cask electrum
+brew install --cask fawkes
+brew install --cask ferdi
 brew install --cask firefox
 brew install --cask font-source-code-pro
 brew install --cask fork
@@ -221,16 +225,17 @@ brew install --cask microsoft-office
 # brew install --cask minikube
 brew install --cask mkvtoolnix
 brew install --cask moom
+brew install --cask mycrypto
 brew install --cask mysqlworkbench
-brew install --cask nally
-brew install --cask ngrok
+# brew install --cask nally
+# brew install --cask ngrok
 brew install --cask nosql-workbench-for-amazon-dynamodb
 brew install --cask notion
 brew install --cask obs
 brew install --cask obsidian
 brew install --cask omnidisksweeper
-brew install --cask omnifocus
-brew install --cask omnigraffle
+# brew install --cask omnifocus
+# brew install --cask omnigraffle
 brew install --cask openvisualtraceroute
 brew install --cask pdf-expert
 brew install --cask phoenix-slides
@@ -239,12 +244,12 @@ brew install --cask proxyman
 brew install --cask rescuetime
 brew install --cask send-to-kindle
 brew install --cask sequel-ace
-brew install --cask sequel-pro
+# brew install --cask sequel-pro
 # brew install --cask sizeup
-brew install --cask sketch
-brew install --cask skype
+# brew install --cask sketch
+# brew install --cask skype
 brew install --cask slack
-brew install --cask sourcetree
+# brew install --cask sourcetree
 brew install --cask spotify
 # brew install --cask teamviewer
 brew install --cask telegram

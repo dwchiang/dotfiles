@@ -92,3 +92,6 @@ fi
     echo "${tags}"
 }
 
+# To list the architecture of the containers
+# src: https://stackoverflow.com/questions/66834864/how-to-determine-when-docker-containers-on-an-m1-macbook-are-running-via-qemu
+alias docker-arch-ps='for i in `docker ps --format "{{.Image}}"` ; do docker image inspect $i --format "$i -> {{.Architecture}} : {{.Os}}" ;done';
