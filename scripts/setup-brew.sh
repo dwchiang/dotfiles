@@ -118,6 +118,7 @@ brew install mcrypt
 # brew install minikube
 # brew install mysql
 # brew install nginx
+brew install nmap
 # brew install node
 brew install numpy
 brew install nvm
@@ -160,6 +161,7 @@ brew install zsh-completions
 # Memo: Calling brew cask install is disabled! Use brew install [--cask] instead.
 #
 brew install --cask alfred
+brew install --cask altair-graphql-client
 brew install --cask aegisub
 brew install --cask amazon-chime
 brew install --cask android-platform-tools
@@ -171,6 +173,7 @@ brew install --cask basictex
 brew install --cask blue-jeans
 # brew install --cask boinc
 # brew install --cask brackets
+brew install --cask brave-browser
 brew install --cask calibre
 brew install --cask clipy
 brew install --cask coolterm
@@ -185,6 +188,7 @@ brew install --cask dynobase
 brew install --cask electrum
 brew install --cask fawkes
 brew install --cask ferdi
+brew install --cask firefly
 brew install --cask firefox
 brew install --cask font-source-code-pro
 brew install --cask fork
@@ -225,6 +229,7 @@ brew install --cask microsoft-office
 # brew install --cask minikube
 brew install --cask mkvtoolnix
 brew install --cask moom
+brew install --cask mqtt-explorer
 brew install --cask mycrypto
 brew install --cask mysqlworkbench
 # brew install --cask nally
@@ -241,6 +246,7 @@ brew install --cask pdf-expert
 brew install --cask phoenix-slides
 brew install --cask postman
 brew install --cask proxyman
+brew install --cask raspberry-pi-imager
 brew install --cask rescuetime
 brew install --cask send-to-kindle
 brew install --cask sequel-ace
