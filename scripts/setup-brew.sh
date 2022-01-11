@@ -214,6 +214,7 @@ brew install --cask java
 # brew install --cask java10
 brew install --cask joplin
 brew install --cask keepassx
+brew install --cask keepassxc
 brew install --cask keka
 brew install --cask keybase
 brew install --cask keycastr
