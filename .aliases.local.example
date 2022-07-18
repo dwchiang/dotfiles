@@ -10,7 +10,7 @@ alias blogd="cd '$PATH_BLOG'"
 
 function blogserv() {
     cd $PATH_BLOG
-    open "/Applications/Google Chrome.app" http://localhost:1313
+    open "/Applications/Brave Browser.app" http://localhost:1313
     hugo server -D -F -w
 }
 
@@ -95,3 +95,17 @@ fi
 # To list the architecture of the containers
 # src: https://stackoverflow.com/questions/66834864/how-to-determine-when-docker-containers-on-an-m1-macbook-are-running-via-qemu
 alias docker-arch-ps='for i in `docker ps --format "{{.Image}}"` ; do docker image inspect $i --format "$i -> {{.Architecture}} : {{.Os}}" ;done';
+
+###################################################################################
+# AWS ECR tools
+###################################################################################
+
+function delete-aws-ecr-untagged-images() {
+    aws ecr describe-repositories \
+    | jq --raw-output '.repositories[].repositoryName' \
+    | while read repo; do  
+        imageIds=$(aws ecr list-images --repository-name $repo --filter tagStatus=UNTAGGED --query 'imageIds[*]' --output json | jq -r '[.[].imageDigest] | map("imageDigest="+.) | join (" ")');
+        if [[ "$imageIds" == "" ]]; then continue; fi
+        echo "aws ecr batch-delete-image --repository-name $repo --image-ids $imageIds";
+    done
+}

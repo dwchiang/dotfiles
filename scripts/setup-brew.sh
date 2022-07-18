@@ -138,6 +138,7 @@ brew install pyenv
 brew install redis
 brew install romkatv/powerlevel10k/powerlevel10k
 brew install siege
+brew install scrcpy
 brew install socat
 brew install speedtest-cli
 brew install sphinx-doc
@@ -184,6 +185,7 @@ brew install --cask discord
 brew install --cask docker
 brew install --cask drawio
 brew install --cask dropbox
+brew install --cask dropzone
 brew install --cask dynobase
 brew install --cask electrum
 brew install --cask fawkes
@@ -242,6 +244,7 @@ brew install --cask obsidian
 brew install --cask omnidisksweeper
 # brew install --cask omnifocus
 # brew install --cask omnigraffle
+brew install --cask openmtp 
 brew install --cask openvisualtraceroute
 brew install --cask pdf-expert
 brew install --cask phoenix-slides
