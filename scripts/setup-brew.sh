@@ -19,7 +19,7 @@ brew tap aws/tap
 brew tap brewsci/bio
 brew tap brewsci/science
 brew tap dart-lang/dart
-brew tap federico-terzi/espanso
+# brew tap federico-terzi/espanso
 brew tap homebrew/cask
 brew tap homebrew/cask-drivers
 brew tap homebrew/cask-fonts
@@ -62,10 +62,10 @@ brew install dart-lang/dart/dart
 brew install dnsmap
 # brew install docker
 brew install duf
-brew install espanso
+# brew install espanso
 
-espanso install all-emojis
-espanso restart
+# espanso install all-emojis
+# espanso restart
 
 brew install esptool
 # brew install ethereum
@@ -153,6 +153,8 @@ brew install wget
 brew install hsatac/toybox/wifi-password-qr
 brew install wireshark
 brew install youtube-dl
+brew install yt-dlp
+brew install zint
 brew install zoom
 brew install zotero
 brew install zsh-completions
@@ -204,6 +206,7 @@ brew install --cask grandperspective
 brew install --cask hacker-menu
 brew install --cask handbrake
 brew install --cask ifunbox
+brew install --cask iina
 brew install --cask imageoptim
 brew install --cask intel-haxm
 brew install --cask istat-menus
@@ -224,7 +227,8 @@ brew install --cask keystore-explorer
 brew install --cask kindle
 brew install --cask kobo
 brew install --cask limechat
-brew install --cask macdown
+brew install --cask mcbopomofo
+# brew install --cask macdown
 brew install --cask macs-fan-control
 brew install --cask mactracker
 brew install --cask microsoft-office
@@ -238,7 +242,8 @@ brew install --cask mysqlworkbench
 # brew install --cask nally
 # brew install --cask ngrok
 brew install --cask nosql-workbench-for-amazon-dynamodb
-brew install --cask notion
+# brew install --cask notion
+brew install --cask numi
 brew install --cask obs
 brew install --cask obsidian
 brew install --cask omnidisksweeper
@@ -251,6 +256,7 @@ brew install --cask phoenix-slides
 brew install --cask postman
 brew install --cask proxyman
 brew install --cask raspberry-pi-imager
+brew install --cask raycast
 brew install --cask rescuetime
 brew install --cask send-to-kindle
 brew install --cask sequel-ace
@@ -277,7 +283,7 @@ brew install --cask whatsize
 brew install --cask wireshark
 brew install --cask wwdc
 # brew install --cask x-mirage
-brew install --cask xmind
+# brew install --cask xmind
 brew install --cask xnconvert
 brew install --cask xnviewmp
 brew install --cask xquartz

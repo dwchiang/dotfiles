@@ -13,7 +13,7 @@
     branch = auto
     ui = true
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/dwchiang/.gitignore_global
 	editor = vim
 [commit]
     # Ref: https://dev.to/sespinozj/git-write-quality-commits-38ph
@@ -41,3 +41,15 @@
 [pull]
     # Since git v2.27
 	rebase = false
+[user]
+	name = Ernest Chiang
+	email = dwchiang@gmail.com
+	signingkey = 3A6799F6D19F106B
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[gpg]
+	program = /opt/homebrew/bin/gpg

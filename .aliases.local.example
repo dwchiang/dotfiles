@@ -10,7 +10,7 @@ alias blogd="cd '$PATH_BLOG'"
 
 function blogserv() {
     cd $PATH_BLOG
-    open "/Applications/Brave Browser.app" http://localhost:1313
+    open "/Applications/Arc.app" http://localhost:1313
     hugo server -D -F -w
 }
 
