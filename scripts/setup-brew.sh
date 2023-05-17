@@ -182,6 +182,7 @@ brew install --cask clipy
 brew install --cask coolterm
 brew install --cask cyberduck
 brew install --cask db-browser-for-sqlite
+brew install --cask dbgate
 # brew install --cask deepl
 brew install --cask discord
 brew install --cask docker
@@ -267,6 +268,7 @@ brew install --cask sequel-ace
 brew install --cask slack
 # brew install --cask sourcetree
 brew install --cask spotify
+brew install --cask sqlitestudio
 # brew install --cask teamviewer
 brew install --cask telegram
 brew install --cask thumbsup
