@@ -14,6 +14,12 @@ function blogserv() {
     hugo server -D -F -w
 }
 
+function blogservnodraft() {
+    cd $PATH_BLOG
+    open "/Applications/Arc.app" http://localhost:1313
+    hugo server -w
+}
+
 function hugonew() {
     cd $PATH_BLOG && ./hugo-new-post.sh $1 && code .
 }
