@@ -219,6 +219,7 @@ brew install --cask java
 # brew install --cask java9
 # brew install --cask java10
 brew install --cask joplin
+brew install --cask jordanbaird-ice
 brew install --cask keepassx
 brew install --cask keepassxc
 brew install --cask keka
