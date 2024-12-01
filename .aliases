@@ -7,10 +7,10 @@ alias video_to_gif='function video_to_gif(){ ffmpeg -i "$1" "${1%.*}.gif" && gif
 
 # Use Python 3 as the macOS default
 # https://opensource.com/article/19/5/python-3-default-mac
-if [ "${arch_name}" = "x86_64" ]; then
-    alias python=/usr/local/bin/python3
-    alias pip=/usr/local/bin/pip3
-elif [ "${arch_name}" = "arm64" ]; then
-    alias python=/opt/homebrew/bin/python3
-    alias pip=/opt/homebrew/bin/pip3
-fi
+# if [ "${arch_name}" = "x86_64" ]; then
+#     alias python=/usr/local/bin/python3
+#     alias pip=/usr/local/bin/pip3
+# elif [ "${arch_name}" = "arm64" ]; then
+#     alias python=/opt/homebrew/bin/python3
+#     alias pip=/opt/homebrew/bin/pip3
+# fi

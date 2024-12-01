@@ -169,6 +169,10 @@ export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app
 # yarn
 export PATH="${PATH}:${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/.bin"
 
+# TeX
+export PATH="${PATH}:/usr/local/texlive/2024basic/bin/universal-darwin"
+export PATH="${PATH}:/Library/TeX/texbin"
+
 # for autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -227,6 +231,11 @@ jenv enable-plugin maven > /dev/null
 ####################################################################
 # pyenv
 ####################################################################
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi

@@ -11,13 +11,13 @@ alias blogd="cd '$PATH_BLOG'"
 function blogserv() {
     cd $PATH_BLOG
     open "/Applications/Arc.app" http://localhost:1313
-    hugo server -D -F -w
+    hugo server --buildDrafts --buildFuture --disableFastRender --watch --logLevel info
 }
 
 function blogservnodraft() {
     cd $PATH_BLOG
     open "/Applications/Arc.app" http://localhost:1313
-    hugo server -w
+    hugo server --watch --logLevel info
 }
 
 function hugonew() {
@@ -54,7 +54,6 @@ function scapture-default() {
 
 # Image Optimization
 alias imgoptim="/Applications/ImageOptim.app/Contents/MacOS/ImageOptim"
-
 
 ###################################################################################
 # Docker tools
