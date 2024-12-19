@@ -180,7 +180,9 @@ brew install --cask brave-browser
 brew install --cask calibre
 brew install --cask clipy
 brew install --cask coolterm
+brew install --cask cursor
 brew install --cask cyberduck
+
 brew install --cask db-browser-for-sqlite
 brew install --cask dbgate
 # brew install --cask deepl
@@ -190,13 +192,17 @@ brew install --cask drawio
 brew install --cask dropbox
 brew install --cask dropzone
 brew install --cask dynobase
+
 brew install --cask electrum
+
+brew install --cask fantastical
 brew install --cask fawkes
 brew install --cask ferdi
 brew install --cask firefly
 brew install --cask firefox
 brew install --cask font-source-code-pro
 brew install --cask fork
+
 brew install --cask gitter
 brew install --cask google-chrome
 # brew install --cask google-cloud-sdk
@@ -204,14 +210,18 @@ brew install --cask google-drive-file-stream
 brew install --cask google-hangouts
 brew install --cask gpg-suite
 brew install --cask grandperspective
+
 brew install --cask hacker-menu
 brew install --cask handbrake
+
 brew install --cask ifunbox
 brew install --cask iina
 brew install --cask imageoptim
+brew install --cask insta360-studio
 brew install --cask intel-haxm
 brew install --cask istat-menus
 brew install --cask iterm2
+
 brew install --cask java
 # brew install --cask java6
 # brew install --cask java7
@@ -246,6 +256,7 @@ brew install --cask mysqlworkbench
 brew install --cask nosql-workbench-for-amazon-dynamodb
 # brew install --cask notion
 brew install --cask numi
+
 brew install --cask obs
 brew install --cask obsidian
 brew install --cask omnidisksweeper
@@ -253,6 +264,8 @@ brew install --cask omnidisksweeper
 # brew install --cask omnigraffle
 brew install --cask openmtp 
 brew install --cask openvisualtraceroute
+brew install --cask orbstack
+
 brew install --cask pdf-expert
 brew install --cask phoenix-slides
 brew install --cask postman
@@ -270,11 +283,14 @@ brew install --cask slack
 # brew install --cask sourcetree
 brew install --cask spotify
 brew install --cask sqlitestudio
+
 # brew install --cask teamviewer
 brew install --cask telegram
 brew install --cask thumbsup
+brew install --cask todoist
 brew install --cask transmission
 brew install --cask tunnelblick
+
 # brew install --cask vagrant
 # brew install --cask vagrant-manager
 brew install --cask virtualbox

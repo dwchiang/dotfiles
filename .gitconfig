@@ -44,7 +44,7 @@
 [user]
 	name = Ernest Chiang
 	email = dwchiang@gmail.com
-	signingkey = B2BD584043AE900F
+	signingkey = 497E3F5132703CDB749908C8C9CEFB07A1878177
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

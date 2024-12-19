@@ -1,7 +1,6 @@
 ####################################################################
 # GPG
 ####################################################################
-export GPG_TTY=$(tty)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -9,6 +8,9 @@ export GPG_TTY=$(tty)
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# tty
+export GPG_TTY=$(tty)
 
 # My Shell Lib
 DOTFILES_ROOT=~/.dotfiles
