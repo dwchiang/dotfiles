@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 ####################################################################
 # GPG
 ####################################################################
@@ -8,6 +10,10 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# From nrfutil completion install
+# It should be added before the zsh completion system is initialized in your .zshrc as it adds an entry to the zsh 'fpath' variable.
+[[ -r "${HOME}/.nrfutil/share/nrfutil-completion/scripts/zsh/setup.zsh" ]] && . "${HOME}/.nrfutil/share/nrfutil-completion/scripts/zsh/setup.zsh"
 
 # tty
 export GPG_TTY=$(tty)
@@ -171,6 +177,10 @@ export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app
 # yarn
 export PATH="${PATH}:${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/.bin"
 
+# pnpm
+export PNPM_HOME="/Users/dwchiang/Library/pnpm"
+export PATH="${PATH}:${PNPM_HOME}"
+
 # TeX
 export PATH="${PATH}:/usr/local/texlive/2024basic/bin/universal-darwin"
 export PATH="${PATH}:/Library/TeX/texbin"
@@ -202,7 +212,7 @@ export EDITOR='vim'
 ####################################################################
 # nvm 
 ####################################################################
-# Install zsh-async if it’s not present
+# Install zsh-async if it's not present
 if [[ ! -a ~/.zsh-async ]]; then
   git clone git@me.github.com:mafredri/zsh-async.git ~/.zsh-async
 fi
@@ -276,3 +286,14 @@ echo "============================================================="
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
 [[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+# pnpm
+export PNPM_HOME="/Users/dwchiang/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

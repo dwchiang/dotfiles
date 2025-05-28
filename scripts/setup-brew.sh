@@ -122,6 +122,7 @@ brew install nmap
 # brew install node
 brew install numpy
 brew install nvm
+brew install ollama
 brew install opencv@2
 brew install packer
 brew install pandoc
@@ -307,6 +308,7 @@ brew install --cask xnconvert
 brew install --cask xnviewmp
 brew install --cask xquartz
 brew install --cask yasu
+brew install --cask zen-browser
 # brew install --cask zoomus
 
 # Remove outdated versions from the cellar
