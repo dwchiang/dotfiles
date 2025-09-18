@@ -1,5 +1,8 @@
 # Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh"
+# Only load Amazon Q in non-Cursor environments
+if [[ "$TERM_PROGRAM" != "cursor" ]] && [[ -z "$CURSOR_SESSION" ]]; then
+    [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+fi
 
 # Homebrew
 if [ "$(uname -m)" = "x86_64" ]; then
@@ -91,4 +94,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"
+# Only load Amazon Q in non-Cursor environments
+if [[ "$TERM_PROGRAM" != "cursor" ]] && [[ -z "$CURSOR_SESSION" ]]; then
+    [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+fi

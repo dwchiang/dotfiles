@@ -1,5 +1,9 @@
 # Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Only load Amazon Q in non-Cursor and non-Kiro environments to avoid conflicts
+if [[ "$TERM_PROGRAM" != "cursor" ]] && [[ -z "$CURSOR_SESSION" ]] && [[ "$TERM_PROGRAM" != "kiro" ]]; then
+    [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+fi
+
 ####################################################################
 # GPG
 ####################################################################
@@ -32,7 +36,13 @@ export HOMEBREW_NO_ANALYTICS=1
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Conditional theme loading to avoid conflicts with Kiro shell integration
+if [[ "$TERM_PROGRAM" != "kiro" ]]; then
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+else
+    # Use simple theme in Kiro to avoid CLI session conflicts
+    ZSH_THEME="robbyrussell"
+fi
 
 # https://github.com/romkatv/powerlevel10k
 # ZLE_RPROMPT_INDENT=6
@@ -185,6 +195,9 @@ export PATH="${PATH}:${PNPM_HOME}"
 export PATH="${PATH}:/usr/local/texlive/2024basic/bin/universal-darwin"
 export PATH="${PATH}:/Library/TeX/texbin"
 
+# LM Studio CLI (lms)
+export PATH="${PATH}:/Users/dwchiang/.lmstudio/bin"
+
 # for autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -287,13 +300,12 @@ echo "============================================================="
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
 [[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+# Kiro shell integration - Load first to ensure proper session handling
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
-# pnpm
-export PNPM_HOME="/Users/dwchiang/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# Amazon Q post block. Keep at the bottom of this file.
+# Only load Amazon Q in non-Cursor and non-Kiro environments to avoid conflicts
+if [[ "$TERM_PROGRAM" != "cursor" ]] && [[ -z "$CURSOR_SESSION" ]] && [[ "$TERM_PROGRAM" != "kiro" ]]; then
+    [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+fi
+
