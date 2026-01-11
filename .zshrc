@@ -1,8 +1,6 @@
-# Amazon Q pre block. Keep at the top of this file.
-# Only load Amazon Q in non-Cursor and non-Kiro environments to avoid conflicts
-if [[ "$TERM_PROGRAM" != "cursor" ]] && [[ -z "$CURSOR_SESSION" ]] && [[ "$TERM_PROGRAM" != "kiro" ]]; then
-    [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-fi
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 
 ####################################################################
 # GPG
@@ -303,9 +301,9 @@ echo "============================================================="
 # Kiro shell integration - Load first to ensure proper session handling
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
-# Amazon Q post block. Keep at the bottom of this file.
-# Only load Amazon Q in non-Cursor and non-Kiro environments to avoid conflicts
-if [[ "$TERM_PROGRAM" != "cursor" ]] && [[ -z "$CURSOR_SESSION" ]] && [[ "$TERM_PROGRAM" != "kiro" ]]; then
-    [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-fi
+# Added by Antigravity
+export PATH="/Users/dwchiang/.antigravity/antigravity/bin:$PATH"
 
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"

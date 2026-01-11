@@ -237,6 +237,7 @@ brew install --cask keka
 brew install --cask keybase
 brew install --cask keycastr
 brew install --cask keystore-explorer
+brew install --cask kicad
 brew install --cask kindle
 brew install --cask kobo
 brew install --cask limechat
@@ -298,6 +299,9 @@ brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vlc
 # brew install --cask vmware-fusion
+brew tap wickenico/wailbrew
+brew install --cask wailbrew
+
 brew install --cask whatsapp
 brew install --cask whatsize
 brew install --cask wireshark
