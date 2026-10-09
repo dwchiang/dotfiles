@@ -1,3 +1,5 @@
+# Kiro shell integration - Load first to ensure proper session handling
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
 # Kiro CLI pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
@@ -154,12 +156,23 @@ export NDK="${HOME}/Development/ndk/android-ndk-r19c"
 # Android NDK
 export PATH="${PATH}:${HOME}/Development/ndk/android-ndk-r19c"
 
+# Antigravity
+#export PATH="/Users/dwchiang/.antigravity/antigravity/bin:$PATH"
+export PATH="${PATH}:${HOME}/.antigravity/antigravity/bin"
+
+# Claude Code
+echo 'export CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000'
+
 # Dart (pub)
 export PATH="${PATH}:${HOME}/.pub-cache/bin"
 
 # Flutter
 export PATH="${PATH}:${HOME}/Development/flutter/flutter_v1.12.13+hotfix.5-stable/bin"
 export PATH="${PATH}:${HOME}/Library/flutter/bin"
+
+# Google Cloud (gcloud, gcp)
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # GCC
 export PATH="${PATH}:${HOME}/Development/gcc/gcc-arm-none-eabi-7-2018-q2-update/bin"
@@ -242,14 +255,36 @@ async_register_callback nvm_worker load_nvm
 async_job nvm_worker sleep 0.1
 
 ####################################################################
-# jEnv
+# jEnv (lazy-loaded)
 ####################################################################
+# 不在 shell 啟動時 init jenv，避免 export plugin 把 _jenv_export_hook
+# 註冊進 precmd_functions、每個 prompt 都跑一次版本偵測。jenv 0.6.0 的
+# jenv-version-file 在 $PWD 非絕對路徑時會卡無窮迴圈吃滿 CPU，per-prompt
+# 執行會把這個 bug 放大成孤兒程序累積。改成第一次真的呼叫 java/mvn/jenv
+# 等指令時才載入完整 jenv（含 export、maven plugin）。
 export PATH="${PATH}:${HOME}/.jenv/bin"
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-# ensure that JAVA_HOME is correct
-jenv enable-plugin export > /dev/null
-# make Maven aware of the Java version in use (and switch when your project does)
-jenv enable-plugin maven > /dev/null
+
+_jenv_lazy_init() {
+  # 解除所有 lazy 包裝函式，避免遞迴
+  unset -f jenv jar jarsigner java javac javadoc javap jcmd jconsole jdb \
+    jdeprscan jdeps jfr jhsdb jimage jinfo jlink jmap jmod jpackage jps \
+    jrunscript jshell jstack jstat jstatd jwebserver keytool mvn mvnDebug \
+    rmiregistry serialver 2>/dev/null
+  if which jenv > /dev/null; then
+    eval "$(command jenv init -)"
+    jenv enable-plugin export > /dev/null   # 維持 JAVA_HOME 正確
+    jenv enable-plugin maven  > /dev/null   # 讓 Maven 跟著專案 Java 版本切換
+  fi
+}
+
+# 替每個 jenv 入口指令建立輕量包裝：首次呼叫才真正 init，然後轉交。
+for _c in jenv jar jarsigner java javac javadoc javap jcmd jconsole jdb \
+  jdeprscan jdeps jfr jhsdb jimage jinfo jlink jmap jmod jpackage jps \
+  jrunscript jshell jstack jstat jstatd jwebserver keytool mvn mvnDebug \
+  rmiregistry serialver; do
+  eval "${_c}() { _jenv_lazy_init; ${_c} \"\$@\"; }"
+done
+unset _c
 
 ####################################################################
 # pyenv
@@ -298,12 +333,9 @@ echo "============================================================="
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
 [[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
 
-# Kiro shell integration - Load first to ensure proper session handling
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
-
-# Added by Antigravity
-export PATH="/Users/dwchiang/.antigravity/antigravity/bin:$PATH"
-
-
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+export PATH="$HOME/.local/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

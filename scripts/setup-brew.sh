@@ -145,6 +145,7 @@ brew install speedtest-cli
 brew install sphinx-doc
 brew install ssh-copy-id
 brew install termius
+brew install thaw
 brew install the_silver_searcher
 brew install tig
 brew install tmux
@@ -230,7 +231,7 @@ brew install --cask java
 # brew install --cask java9
 # brew install --cask java10
 brew install --cask joplin
-brew install --cask jordanbaird-ice
+# brew install --cask jordanbaird-ice
 brew install --cask keepassx
 brew install --cask keepassxc
 brew install --cask keka
@@ -268,13 +269,13 @@ brew install --cask openmtp
 brew install --cask openvisualtraceroute
 brew install --cask orbstack
 
-brew install --cask pdf-expert
-brew install --cask phoenix-slides
-brew install --cask postman
-brew install --cask proxyman
-brew install --cask raspberry-pi-imager
+# brew install --cask pdf-expert
+# brew install --cask phoenix-slides
+# brew install --cask postman
+# brew install --cask proxyman
+# brew install --cask raspberry-pi-imager
 brew install --cask raycast
-brew install --cask rescuetime
+# brew install --cask rescuetime
 brew install --cask send-to-kindle
 brew install --cask sequel-ace
 # brew install --cask sequel-pro
@@ -288,6 +289,7 @@ brew install --cask sqlitestudio
 
 # brew install --cask teamviewer
 brew install --cask telegram
+brew install --cask thaw
 brew install --cask thumbsup
 brew install --cask todoist
 brew install --cask transmission
